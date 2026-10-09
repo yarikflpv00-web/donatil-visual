@@ -3,15 +3,16 @@ plugins {
     id 'java'
 }
 
-version = project.mod_version
-group = project.maven_group
+version = "2.4.1"
+group = "gg.donatil.visuals"
 
 base {
-    archivesName = project.archives_base_name
+    archivesName = "donatil-visuals"
 }
 
 repositories {
     mavenCentral()
+    maven { url = "https://fabricmc.net" }
 }
 
 dependencies {
@@ -33,6 +34,6 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-    toolchain.languageVersion = JavaLanguageVersion.of(21)
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
     withSourcesJar()
 }
